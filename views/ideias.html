@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Ideias - Casa Criativa</title>
+        <link rel="stylesheet" href="/css/estilo_ideias.css"/>
+    </head>
+    <body>
+        <section class="container">
+            <div>
+                <img src="/img/logo.png" alt="Logo Casa Criativa" title="Logo Casa Criativa"/>
+            </div>
+            <nav>
+                <li><a href="/">Início</a></li>
+                <li><a href="#">Ideias</a></li>
+                <li><button onclick="chmodal()">Novas Ideias</button></li>
+            </nav>
+        </section><!--Fim container-->
+        <div class="mobile">
+            <nav class="menu-mobile">
+                    <li><a href="/">Início</a></li>
+                    <li><a href="#">Ideias</a></li>
+                    <button onclick="chmodal()">Novas Ideias</button>
+            </nav>
+        </div>
+        <section class="chamada">
+            <p>em exibição</p>
+            <h1>Ideias</h1>
+        </section><!--Fim chamada-->
+        <section class="box-ideias">
+            {% for box in revertido %}
+                <div class="col">
+                        
+                    <div>
+                        <img src="{{box.img}}" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>{{box.title}}</h3>
+                        <strong>{{box.categoria}}</strong>
+                        <p>{{box.descricao}}</p>
+                        <div>
+                            <a href="/deletar/{{box.id}}">Deletar ideia</a>
+                            <a href="#">Ir para ideia</a>
+                        </div>
+                    </div><!--Fim content-->
+
+                </div><!--Fim col-->
+
+            {% endfor %}
+
+        </section><!--Fim box-ideias-->
+        <footer>
+            {% include "footer_.html" %}
+        </footer>
+
+        <!--Modal-->
+            {% include "modal.html" %}
+        <!--Fim Modal-->
+    
+        <script src="js/index.js"></script>
+    </body>
+</html>

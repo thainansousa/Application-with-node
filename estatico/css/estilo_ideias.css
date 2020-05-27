@@ -1,0 +1,317 @@
+/* Reset */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+html, body{
+    height: 100%;
+    background-color: #e5e5e5;
+    color: #25282b;
+}
+
+/* Fim Reset */
+
+/* Start Container */
+
+section.container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+section.container img{
+    padding-left: 150px;
+}
+section.container nav li{
+    display: inline-block;
+    list-style: none;
+    margin-right: 30px;
+
+}
+section.container nav li a{
+    text-decoration: none;
+    color: #25282b;
+    font-weight: bold;
+}
+section.container nav li a:hover{
+    text-decoration: underline;
+    text-decoration-color: #ff5E84;
+}
+section.container nav button{
+    padding: 15px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    color: white;
+    background-color: #ff5E84;
+    outline: none;
+}
+section.container nav button:hover{
+    background-color: #0984e3;
+    transition: 400ms;
+}
+div.mobile{
+    width: 100%;
+    text-align: center;
+    display: none;
+}
+div.mobile nav li{
+    display: inline-block;
+    list-style: none;
+    margin-right: 30px;
+
+}
+div.mobile nav li a{
+    text-decoration: none;
+    color: #25282b;
+    font-weight: bold;
+}
+div.mobile nav li a:hover{
+    text-decoration: underline;
+    text-decoration-color: #ff5E84;
+}
+div.mobile nav button{
+    padding: 15px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    color: white;
+    background-color: #ff5E84;
+    outline: none;
+}
+div.mobile nav button:hover{
+    background-color: #0984e3;
+    transition: 400ms;
+}
+/* End Container */
+
+/* Star chamada */
+
+section.chamada{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px 0;
+}
+section.chamada p{
+    color: #777;
+    font-weight: bold;
+    opacity: 0.5;
+}
+section.chamada h1{
+    font-weight:800;
+    letter-spacing: 1;
+    font-size: 28px;
+}
+/* End chamada */
+
+/* Start box-ideias */
+
+section.box-ideias{
+    display: flex;
+    padding: 0 2%;
+    flex-wrap: wrap;
+    width: 100%;
+}
+section.box-ideias .col{
+    width: 50%;
+    background-color: #fff;;
+    border: 30px solid #e5e5e5;
+    display: flex;
+    padding: 40px 20px 20px 20px;
+    border-radius: 45px;
+}
+section.box-ideias .col img{
+    width: 60px;
+    height: 60px;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+section.box-ideias .col h3{
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+section.box-ideias .col strong{
+    color: #777;
+    font-size: 12px;
+}
+section.box-ideias .col p{
+    margin: 10px 0;
+}
+section.box-ideias .col a{
+    float: right;
+    text-decoration: none;
+    color: #ff5E84;
+    font-weight: bold;
+    margin-top: 10px;
+}
+section.box-ideias .col a:first-child{
+    float: left;
+}
+section.box-ideias .col a:hover{
+    text-decoration: underline
+}
+/* End box-ideias */
+
+/* Start Modal */
+
+.modal{
+    width: 100%;
+    height: 100%;
+    background-color: #ff5E84;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    transition: 400ms;
+}
+
+.content-modal form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.content-modal form div:nth-child(3),
+.content-modal form div:nth-child(4),
+.content-modal form div:nth-child(5),
+.content-modal form div:last-child{
+    grid-column: span 2;
+}
+.modal.hidden{
+    opacity: 0;
+    visibility: hidden;
+}
+.modal h1{
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.modal .content-modal{
+    margin-top: 20px;
+}
+.modal form{
+    padding: 3%;
+}
+.content-modal form .input-wrapper label{
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.content-modal input, .content-modal textarea{
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    resize: none;
+    border-radius: 5px;
+    border: 1px solid #ff5E84;
+    outline: none;
+}
+.content-modal input:focus, .content-modal textarea:focus{
+    border: 1px solid rgba(243, 17, 70, 0.5);
+}
+.content-modal .btns{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+
+}
+.content-modal button{
+    width: 150px;
+    height: 40px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    color: #ff5E84;
+    background-color: #fff;
+    font-weight: 600;
+    outline: none;
+}
+.content-modal a{
+    width: 150px;
+    height: 40px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    color: #ff5E84;
+    background-color: #fff;
+    font-weight: 600;
+    outline: none;
+    text-decoration: none;
+    text-align: center;
+    line-height: 40px;
+    font-size: 14px;
+}
+.content-modal a:hover{
+    background-color: rgb(216, 213, 41);
+    color: rgb(194, 8, 48);
+    transition: 400ms;
+}
+.content-modal button:hover{
+    background-color:#0984e3;
+    color: #fff;
+    transition: 400ms;
+}
+/* End Modal */
+
+/* Footer */
+
+footer{
+    width: 100%;
+    text-align: center;
+    margin: 20px 0;
+    font-weight: bold;
+}
+footer a{
+    color: #ff5E84;
+    text-decoration: none;
+}
+footer a:hover{
+    text-decoration: underline;
+}
+/* End footer */
+
+
+/* Responsive */
+
+@media screen and (max-width: 1000px){
+    section.box-ideias{
+        flex-direction: column;
+    }
+    section.box-ideias .col{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 900px){
+    section.container{
+        display: flex;
+        justify-content: center;
+    }
+    section.container img{
+        padding: 0;
+    }
+    section.container nav{
+        display: none;
+    }
+    div.mobile{
+        display: block;
+    }
+    div.mobile li{
+         margin-left: 35px;
+    }
+}
+/* Fim responsive */

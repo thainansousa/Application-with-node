@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Casa Criativa</title>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="/css/estilo.css"/>
+    </head>
+    <body>
+        <div class="container">
+            <section class="content">
+                <section class="logo">
+                    <img src="/img/logo.png" alt="Logo Casa Criativa" title="Logo Casa Criativa"/>
+                </section>
+                <section class="paragraphs">
+                        <p>Ficar em casa em períodos longos não deve ser nada fácil!</p>
+                        <p>
+                         Iremos catalogar ideias, <strong>brincadeiras, jogos, filmes, livros, cursos, dicas</strong> e tudo que for necessário para tornar esse momento mais interessante.
+                        </p>
+                        <p>
+                         Comece clicando em <span>ver ideias</span> para ver as  ideias cadastradas e contribua <span>adicionando a sua ideia</span>.
+                        </p>
+                </section>
+                <section class="buttons">
+                    <button onclick="chmodal()">+ Adicionar Ideia</button>
+                    <button><a href="/ideias">Ver Ideias</a></button>
+                </section><!--Fim buttons-->
+                <footer>
+                    {% include "footer_.html" %}
+                </footer>
+            </section><!--Fim content-->
+            <main class="ideias">
+
+                {% for box in ideias %}
+                    <section class="box">
+                        <div>
+                            <img src="{{box.img}}" alt="">
+                        </div>
+                        <div>
+                            <h3>{{box.title}}</h3>
+                            <strong>{{box.categoria}}</strong>
+                            <p>{{box.descricao}}</p>
+                            <a href="#">Ir para ideia</a>
+                        </div>
+                    </section><!--Fim box-->
+
+                {% endfor %}
+            </main><!--Fim ideias-->
+             <footer class="footer-mobile">
+                {% include "footer_.html" %}
+             </footer>
+        </div><!--Fim container-->
+            
+            <!--Modal-->
+            {% include "modal.html" %}
+            <!--Fim Modal-->
+        <script src="/js/index.js"></script>
+    </body>
+</html>

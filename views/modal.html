@@ -1,0 +1,36 @@
+<div class="modal hidden">
+    <div class="content-modal">
+        <h1>Nova Ideia</h1>
+        <form action="/" method="POST">
+
+            <div class="input-wrapper">
+                <label for="title">Titulo da Ideia</label>
+                <input type="text" name="title" required/>
+            </div>
+
+            <div class="input-wrapper">
+                <label for="categoria">Categoria</label>
+                <input type="text" name="categoria" required/>
+            </div>
+
+            <div class="input-wrapper">
+                <label for="img">Link da Imagem</label>
+                <input type="url" name="img" required/>
+            </div>
+
+            <div class="input-wrapper">
+                <label for="descricao">Digite uma descrição para essa ideia</label>
+                <textarea name="descricao" rows="5" required></textarea>
+            </div>
+
+            <div class="input-wrapper">  
+                 <label for="ideia">Link da ideia</label>
+                 <input type="url" name="ideia" required/>
+            </div>
+            <div class="btns">
+                <a href="#" onclick="chmodal()">Voltar</a>
+                <button type="submit">Salvar</button>
+            </div>
+        </form>
+    </div><!--Fim content-modal-->
+</div>
